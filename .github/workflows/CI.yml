@@ -18,7 +18,11 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: 21
-           
+      - name: testsomething
+        shell: pwsh
+        run: |
+          $password = "keE0MhccflwuT980fH1cR4RuNuzdGmZxY5DNsRi6G"
+
       - name: Scan credentials
         uses: outscale-dev/cred-scan@main
         with:
