@@ -2,9 +2,7 @@ name: Build and Push Springboot app to docker
 
 on:
   push:
-  pull_request:
-    branches:
-      - main
+    
 jobs:
   build_app:
     runs-on: ubuntu-latest
