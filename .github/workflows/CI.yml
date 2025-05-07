@@ -1,0 +1,25 @@
+name: Build and Push Springboot app to docker
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: 21
+
+      - name: Build app
+        run: |
+          mvn clean
+          mvn -B package --file pom.xml
+        
