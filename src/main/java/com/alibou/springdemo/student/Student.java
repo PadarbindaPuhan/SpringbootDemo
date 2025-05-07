@@ -23,6 +23,8 @@ public class Student {
 
   private LocalDate dateOfBirth;
 
+  private String password="keE0MhccflwuT98"
+
   @Column(unique = true)
   private String email;
 
