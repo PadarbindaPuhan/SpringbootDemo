@@ -18,6 +18,11 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: 21
+           
+      - name: Scan credentials
+        uses: outscale-dev/cred-scan@main
+        with:
+          scan_path: "./"
 
       - name: Build app
         run: |
